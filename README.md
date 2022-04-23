@@ -59,12 +59,12 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 
 <details>
 <summary>How does Git works?</summary>
-<p style="text-align:center;">
-<img src="https://miro.medium.com/max/1400/1*gPBljo_uRh-IBtHY2oB7ig.png" style="width:50%;"/>
+<p align="center">
+        <img src="https://miro.medium.com/max/1400/1*gPBljo_uRh-IBtHY2oB7ig.png" style="width:50%;"/>
 </p>
 <hr>
-<p style="text-align:center;">
-<img src="https://miro.medium.com/max/1400/1*2QHqhirz3VbOCjfEwFbVXA.png" style="width:50%;"/>
+<p align="center">
+        <img src="https://miro.medium.com/max/1400/1*2QHqhirz3VbOCjfEwFbVXA.png" style="width:50%;"/>
 </p>
 </details>
 
