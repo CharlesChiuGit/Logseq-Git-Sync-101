@@ -64,11 +64,38 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 </p>
 </details>
 
-## Limitations
+## Limitations of GitHub
 
 1. Recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended.
 2. GitHub blocks pushes that exceed 100 MB, and you will receive a warning form Git when you attempt to add or update a file larger than 50 MB.
 3. Use [Git Large File Storage (Git LFS)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage), if you really need to track those big files with Git.
+
+## Things you should avoid
+
+1. Open multiple instances of Logseq at a time, e.g. open Logseq on your computer and on your phone at the same time. This will cause conflict in your repo.
+2. Put large files in `assets` folder, like images, videos, etc.
+
+## Conflicts handling
+
+#### What is Git Conflicts?
+
+Git Conflicts happen when you have two commits modifying same line of the files.
+
+Git Conflicts are something every Git users will meet eventually. It's important to know how to solve them.
+
+For example, You type "I'm faithful to Logseq." in your journal on your pc, but you also type "Na, I also use other note-taking tools." in your journal on your phone at the same time. GitHub will accept the first commits you push to it. But when you push the second commits, Git will say something like:
+
+```bash
+error: failed to push some refs to 'github.com:{your-username}/{your-reponame}.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+which basicly means: "WTF Bruh, I can't believe you just lie to me. How can I trust you again?"
+
+So you have type `git pull` in your **Git Bash**/**iTerms**/**Termux** to gain GitHub's trust again, like what Git suggested in `hint:`. And that's how to resolve most of Git Conflicts.
 
 ---
 
@@ -77,6 +104,8 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 ### Set up Git
 
 This is like typing in the account/passward, so make sure you follow **ALL** the steps in [set-up-git](https://docs.github.com/en/get-started/quickstart/set-up-git).
+
+※ Noted: `SSH-keys` is prefered to use in this workflow, **PLEASE** set it properly, **PLEASE**. [Connecting over SSH Section Link](https://docs.github.com/en/get-started/quickstart/set-up-git#connecting-over-ssh)
 
 ### Create a private repo
 
@@ -154,14 +183,12 @@ After Git is set and a private repo is created:
 
 ※ Noted: If you are a student, you can sign up [github student pack](https://education.github.com/pack) and apply for free Working Copy Pro.
 
-### <img src="./src/android.svg" style="width:25px;"/> For Android users
-
-Steps are provided by @Abulafia[^4], sorry that I don't know the exact steps of everything.
+### <img src="./src/android.svg" style="width:25px;"/> For Android users, by @Abulafia[^4]
 
 #### Initial steps to install git and link it with logseq
 
 1. Install `Termux` in Android, using F-droid app. Follow instructions [here](https://wiki.termux.com/wiki/Installing_from_F-Droid)
-2. Open Termux and write `pkg install git` to install git
+2. Open Termux and type `pkg install git` to install git
 3. Configure git username and email: `git config --global user.name "John Doe"` and `git config --global user.email johndoe@example.com` (this is the name and email which will go in the commits, it can be anything, not related with your Github account)
 4. In termux terminal create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
 5. Open logseq and add a graph on that folder. Check that all looks ok.
@@ -174,7 +201,7 @@ Steps are provided by @Abulafia[^4], sorry that I don't know the exact steps of 
    ```bash
    #!/usr/bin/bash
    source bin/source-ssh-agent
-   cd {your repo location}  # eg: cd ~/documents/MyGraph 
+   cd {your repo location}  # eg: cd ~/documents/MyGraph
    git pull
    ```
 
@@ -190,21 +217,20 @@ Steps are provided by @Abulafia[^4], sorry that I don't know the exact steps of 
    git commit -m "sync from android"
    git push
    ```
+
 4. Add to the Android screen a widget for `Termux Widget` app, which will show the scripts available in `~/.shortcuts` (in our example, it will show pull-graph and push-graph). Taping on them, they will be executed by Termux.
 
-#### Workflow
+#### Android-Termux-Workflow
 
-* Tap "pull-graph" to download from github the most recent version of your graph
-* Open Logseq and admire the latest version of your notes
-* Edit/add notes, work on them
-* Exit logseq and tap "push-graph" to upload your changes to github
-  
-
+- Tap "pull-graph" to download from github the most recent version of your graph
+- Open Logseq and admire the latest version of your notes
+- Edit/add notes, work on them
+- Exit logseq and tap "push-graph" to upload your changes to github
 
 ### <img src="./src/linux.svg" style="width:25px;"/> For Linux users
 
 <details>
-    <summary>Linux user click here</summary>
+    <summary>Linux users click here</summary>
     If you are a Linux user, why are you still watching this repo? Shooo. 😎
 </details>
 
