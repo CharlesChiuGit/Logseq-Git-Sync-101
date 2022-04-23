@@ -25,13 +25,10 @@ FYI, those IDs are IDs in [Logseq Discord Server](https://discord.gg/bZ2jF9taUg)
 
 ## Why use Git + GitHub to sync Logseq graph?
 
-### Self Managed Sync Diagram
+### Self Managed Sync Diagram, by @danzu[^6]
 
-<p style="text-align:center;">
-  <figure>
+<p align="center">
       <img src="./src/self-managed-sync.png" style="width:80%"/>
-      <figcaption>Drawn by @danzu</figcaption>
-  </figure>
 </p>
 
 From the above diagram, it's pretty obvious that **Git** is the most robust way to sync your graph. iCloud is slow and problematic, and [Syncthing](https://syncthing.net/downloads/) is not available on iOS/iPadOS.
