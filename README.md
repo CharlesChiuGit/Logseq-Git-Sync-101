@@ -6,7 +6,7 @@ This repo aims to help Logseq users to sync their data with Git and GitHub.
 
 <p style="text-align:center;">
     <figure>
-        <img src="./src/meme.drawio.svg" style="width:50%"/>
+        <img src="./src/ppap-meme.svg" style="width:50%"/>
     </figure>
 </p>
 
