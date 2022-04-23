@@ -4,6 +4,12 @@
 
 This repo aims to help Logseq users to sync their data with Git and GitHub.
 
+<p style="text-align:center;">
+    <figure>
+        <img src="./src/meme.drawio.svg" style="width:50%"/>
+    </figure>
+</p>
+
 ## Credits
 
 Credits to @danieltomasz[^1], @Sawhney[^2], @Caps[^3], @Abulafia[^4] @qwxlea[^5] for the workflow build up. And credits to @danzu[^6] for the incredicable diagram!
@@ -95,7 +101,38 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 which basicly means: "WTF Bruh, I can't believe you just lie to me. How can I trust you again?"
 
-So you have type `git pull` in your **Git Bash**/**iTerms**/**Termux** to gain GitHub's trust again, like what Git suggested in `hint:`. And that's how to resolve most of Git Conflicts.
+So you type `git pull` in your **Git Bash**/**iTerms**/**Termux** to gain GitHub's trust again, like what Git suggested in `hint:`. And that's how to resolve most of Git Conflicts.
+
+But sometimes that's not enough. Git will say:
+
+```bash
+Auto-merging {the conflict file} #e.g. journals/2022_04_23.md
+CONFLICT (content): Merge conflict in {the conflict file}
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+which basicly means you have to manually delete which part you don't want.
+
+So you open {the conflict file} with whatever text editor you like and fix it.
+
+In the text editor:
+
+```txt
+<<<<<<< HEAD
+- I’m faithful to Logseq. # Ok, I choose to keep this part.
+=======
+- Na, I also use other note-taking tools.
+>>>>>>> 744f5cf94a46da43f5b318dab74c0f672bae31e2
+
+```
+
+After deletion ==> :
+
+```txt
+- I’m faithful to Logseq.
+```
+
+Open Logseq and that let Logseq do the rest for you. Now you should only see the chosen part remian in your GitHub repo. And you are again a happy Logseq user now! 😍
 
 ---
 
