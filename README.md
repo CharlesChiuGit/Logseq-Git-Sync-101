@@ -4,10 +4,8 @@
 
 This repo aims to help Logseq users to sync their data with Git and GitHub.
 
-<p style="text-align:center;">
-    <figure>
+<p align="center">
         <img src="./src/ppap-meme.svg" style="width:50%"/>
-    </figure>
 </p>
 
 ## Credits
@@ -99,7 +97,7 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-which basicly means: "WTF Bruh, I can't believe you just lie to me. How can I trust you again?"
+which basicly means: "WTF Bruh, I can't believe you just lied to me. How can I trust you again?"
 
 So you type `git pull` in your **Git Bash**/**iTerms**/**Termux** to gain GitHub's trust again, like what Git suggested in `hint:`. And that's how to resolve most of Git Conflicts.
 
@@ -132,7 +130,7 @@ After deletion ==> :
 - I’m faithful to Logseq.
 ```
 
-Open Logseq and that let Logseq do the rest for you. Now you should only see the chosen part remian in your GitHub repo. And you are again a happy Logseq user now! 😍
+Open Logseq and that let Logseq do the rest for you. Now you should only see the chosen part remain in your GitHub repo. And you are again a happy Logseq user now! 😍
 
 ---
 
