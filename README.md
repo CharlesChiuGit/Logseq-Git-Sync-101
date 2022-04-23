@@ -63,9 +63,6 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 </p>
 </details>
 
-- ref: [What is github?](https://kinsta.com/knowledgebase/what-is-github/)
-- ref: [How does Git work?](https://medium.com/@sahoosunilkumar/how-does-git-works-5cc8444ea383)
-
 ---
 
 ## Workflow
@@ -194,3 +191,5 @@ Steps are provides by @Abulafia[^4], sorry that I don't know the exact steps of 
 - [Gitea - self hosted git server](https://discord.com/channels/725182569297215569/924907384730689566/963840487712780320), by @Sawhney[^2].
 - [Self Managed Sync + Android setup](https://discord.com/channels/725182569297215569/966983361249816586), by @danzu[^5] and @Abulafia[^4].
 - [git hooks settings](https://discord.com/channels/725182569297215569/960982172683100160)
+- [What is github?](https://kinsta.com/knowledgebase/what-is-github/)
+- [How does Git work?](https://medium.com/@sahoosunilkumar/how-does-git-works-5cc8444ea383)
