@@ -28,10 +28,10 @@ FYI, those IDs are IDs in [Logseq Discord Server](https://discord.gg/bZ2jF9taUg)
 ### Self Managed Sync Diagram
 
 <p style="text-align:center;">
-    <figure>
-        <img src="./src/self-managed-sync.png" style="width:100%"/>
-        <figcaption>Drawn by @danzu</figcaption>
-    </figure>
+  <figure>
+      <img src="./src/self-managed-sync.png" style="width:80%"/>
+      <figcaption>Drawn by @danzu</figcaption>
+  </figure>
 </p>
 
 From the above diagram, it's pretty obvious that **Git** is the most robust way to sync your graph. iCloud is slow and problematic, and [Syncthing](https://syncthing.net/downloads/) is not available on iOS/iPadOS.
@@ -60,11 +60,11 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 <details>
 <summary>How does Git works?</summary>
 <p align="center">
-        <img src="https://miro.medium.com/max/1400/1*gPBljo_uRh-IBtHY2oB7ig.png" style="width:50%;"/>
+  <img src="https://miro.medium.com/max/1400/1*gPBljo_uRh-IBtHY2oB7ig.png" style="width:50%;"/>
 </p>
 <hr>
 <p align="center">
-        <img src="https://miro.medium.com/max/1400/1*2QHqhirz3VbOCjfEwFbVXA.png" style="width:50%;"/>
+  <img src="https://miro.medium.com/max/1400/1*2QHqhirz3VbOCjfEwFbVXA.png" style="width:50%;"/>
 </p>
 </details>
 
@@ -87,7 +87,7 @@ Git Conflicts happen when you have two commits modifying same line of the files.
 
 Git Conflicts are something every Git users will meet eventually. It's important to know how to solve them.
 
-For example, You type "I'm faithful to Logseq." in your journal on your pc, but you also type "Na, I also use other note-taking tools." in your journal on your phone at the same time. GitHub will accept the first commits you push to it. But when you push the second commits, Git will say something like:
+For example, You type "I'm faithful to Logseq." in your journal on your pc, but you also type "Na, I also use other note-taking tools." in your journal on your phone at the same time. GitHub will accept the first commit you push to it. But when you push the second commit, Git will say something like:
 
 ```bash
 error: failed to push some refs to 'github.com:{your-username}/{your-reponame}.git'
@@ -109,18 +109,21 @@ CONFLICT (content): Merge conflict in {the conflict file}
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-which basicly means you have to manually delete which part you don't want.
+which means you have to manually delete which part you don't want.
 
 So you open {the conflict file} with whatever text editor you like and fix it.
 
 In the text editor:
 
 ```txt
+<<<<<<< HEAD
+- I’m faithful to Logseq. # Ok, I choose to keep this part.
+=======
 - Na, I also use other note-taking tools.
-
+>>>>>>> 744f5cf94a46da43f5b318dab74c0f672bae31e2
 ```
 
-After deletion ==> :
+After deletion:
 
 ```txt
 - I’m faithful to Logseq.
@@ -164,7 +167,7 @@ After Git is set and a private repo is created:
 
 1. Go to your local drive (for example: `D:\`) and right-click on it.
 2. You should see `Git Bash Here`, click it.
-3. type `git clone git@github.com:{your-username}/{your-reponame}.git` and hit enter.
+3. Type `git clone git@github.com:{your-username}/{your-reponame}.git` and hit enter.
 4. If it's your first time git clone something from GitHub, it will probably ask if you agree to authorized the connection, just type `Yes` and hit enter.
 5. After it's done, you should see a new folder with your repo name.
 6. Open the folder, there should have a hidden folder named `.git`.
@@ -180,7 +183,7 @@ After Git is set and a private repo is created:
 
 1. Go to your local drive and right-click on it.
 2. You should see `New Terminal at folder`, click it. If you don't see this option, check [this link](https://www.maketecheasier.com/launch-terminal-current-folder-mac/) to enable it.
-3. type `git clone git@github.com:{your-username}/{your-reponame}.git` and hit enter.
+3. Type `git clone git@github.com:{your-username}/{your-reponame}.git` and hit enter.
 4. If it's your first time git clone something from GitHub, it will probably ask if you agree to authorized the connection, just type `Yes` and hit enter.
 5. After it's done, you should see a new folder with your repo name.
 6. Open the folder, there should have a hidden folder named `.git`.
@@ -220,7 +223,7 @@ After Git is set and a private repo is created:
 
 1. Install `Termux` in Android, using the `F-droid` app. Follow instructions [here](https://wiki.termux.com/wiki/Installing_from_F-Droid)
 2. Open Termux and type `pkg install git` to install git
-3. Configure git username and email: `git config --global user.name "John Doe"` and `git config --global user.email johndoe@example.com` (this is the name and email which will go in the commits, it can be anything, not related to your Github account)
+3. Configure git username and email: `git config --global user.name "John Doe"` and `git config --global user.email johndoe@example.com` (this is the name and email which will go in commits, it can be anything, not related to your Github account)
 4. In the termux terminal, create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
 5. Open logseq and add a graph on that folder. Check that all looks ok.
 
