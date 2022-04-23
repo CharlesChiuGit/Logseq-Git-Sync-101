@@ -156,22 +156,31 @@ After Git is set and a private repo is created:
 
 ### <img src="./src/android.svg" style="width:25px;"/> For Android users
 
-Steps are provides by @Abulafia[^4], sorry that I don't know the exact steps of everything.
+Steps are provided by @Abulafia[^4], sorry that I don't know the exact steps of everything.
 
-1. Set up Git in your `Termux`.
-2. Open Termux, and type git clone git@github.com:{your-username}/{your-reponame}.git and hit enter.
-3. Create a shortcut in the start screen of android, called it "pull-graph", and when pressed it runs the following shell script (stored in ~/.shortcuts)
+#### Initial steps to install git and link it with logseq
+
+1. Install `Termux` in Android, using F-droid app. Follow instructions [here](https://wiki.termux.com/wiki/Installing_from_F-Droid)
+2. Open Termux and write `pkg install git` to install git
+3. Configure git username and email: `git config --global user.name "John Doe"` and `git config --global user.email johndoe@example.com` (this is the name and email which will go in the commits, it can be anything, not related with your Github account)
+4. In termux terminal create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
+5. Open logseq and add a graph on that folder. Check that all looks ok.
+
+#### Install shortcuts to synchronize the repository
+
+1. Install `Termux:Widgets` from F-droid
+2. In termux, enter folder `~/.shortucts` and edit a file named for example `pull-graph` containing:
 
    ```bash
    #!/usr/bin/bash
    source bin/source-ssh-agent
-   cd {your repo location}
+   cd {your repo location}  # eg: cd ~/documents/MyGraph 
    git pull
    ```
 
-   - ※ Noted: If you use password-free private keys for git you don't need the `ssh-agent` line. You can include it to avoid typing the private key passphrase each time.
+   ※ Noted: If you use password-free private keys for git you don't need the `ssh-agent` line. You can include it to avoid typing the private key passphrase each time.
 
-4. Create another shortcut called "push-graph".
+3. In the same `~/.shortcuts` folder create a second one named for example `pull-graph` contaning:
 
    ```bash
    #!/usr/bin/bash
@@ -181,6 +190,16 @@ Steps are provides by @Abulafia[^4], sorry that I don't know the exact steps of 
    git commit -m "sync from android"
    git push
    ```
+4. Add to the Android screen a widget for `Termux Widget` app, which will show the scripts available in `~/.shortcuts` (in our example, it will show pull-graph and push-graph). Taping on them, they will be executed by Termux.
+
+#### Workflow
+
+* Tap "pull-graph" to download from github the most recent version of your graph
+* Open Logseq and admire the latest version of your notes
+* Edit/add notes, work on them
+* Exit logseq and tap "push-graph" to upload your changes to github
+  
+
 
 ### <img src="./src/linux.svg" style="width:25px;"/> For Linux users
 
