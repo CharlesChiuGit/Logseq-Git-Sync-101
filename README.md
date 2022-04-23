@@ -116,11 +116,7 @@ So you open {the conflict file} with whatever text editor you like and fix it.
 In the text editor:
 
 ```txt
-<<<<<<< HEAD
-- I’m faithful to Logseq. # Ok, I choose to keep this part.
-=======
 - Na, I also use other note-taking tools.
->>>>>>> 744f5cf94a46da43f5b318dab74c0f672bae31e2
 
 ```
 
@@ -160,7 +156,7 @@ logseq/.recycle
 
 ### Download this repo
 
-Clike the green `Code` button and `Download ZIP`, then unzip it for later use.
+Click the green `Code` button and `Download ZIP`, then unzip it for later use.
 
 ### <img src="./src/Windows.svg" style="width:25px;"/> For Windows users
 
@@ -172,7 +168,7 @@ After Git is set and a private repo is created:
 4. If it's your first time git clone something from GitHub, it will probably ask if you agree to authorized the connection, just type `Yes` and hit enter.
 5. After it's done, you should see a new folder with your repo name.
 6. Open the folder, there should have a hidden folder named `.git`.
-7. Copy&paste the `post-commit` and `pre-commit` in `.git/hooks`.
+7. Copy&paste the `post-commit` and `pre-commit` in `.git/hooks`.(Note: this folder could be hidden)
 8. Open Logseq and add the folder with `.git` as your new graph.
 9. Open Logseq > Settings > Version control > Enable Git auto commit.
 10. Type something and wait few minutes to see if what you typed has also appear in GitHub.
@@ -192,11 +188,11 @@ After Git is set and a private repo is created:
 8. Open Logseq and add the folder with `.git` as your new graph.
 9. Open Logseq > Settings > Version control > Enable Git auto commit.
 10. Type something and wait few minutes to see if what you typed has also appear in GitHub.
-11. If nothiong goes wrong, you are a happy Logseq user!
+11. If nothing goes wrong, you are a happy Logseq user!
 
 ### <img src="./src/Apple.svg" style="width:25px;"/> For iOS/iPadOS users
 
-1. Pay for the Pro version of Working Copy, it really cheap since you will never bother by iCloud crashing your Logseq anymore.
+1. Pay for the Pro version of the App `Working Copy`, it is cheap since you will never bother by iCloud crashing your Logseq anymore.
 2. Open Working Copy > Seetings(⚙️) > Hosting Providers > Click `Test` > Sign-in to your GitHub account.
 3. Open `Working Copy` > click `+` > Clone repository > Choose your repo.
 4. When download is done, long-press on the repo > Share > Link Repository to Folder > My iPhone/iPad (I would suggest don't choose iCloud) > Logseq-icon folder > create a new sub-folder under the Logseq-icon one (I would suggest don't name the folder with the same name as your repo.) > click `Done`
@@ -222,10 +218,10 @@ After Git is set and a private repo is created:
 
 #### Initial steps to install git and link it with logseq
 
-1. Install `Termux` in Android, using F-droid app. Follow instructions [here](https://wiki.termux.com/wiki/Installing_from_F-Droid)
+1. Install `Termux` in Android, using the `F-droid` app. Follow instructions [here](https://wiki.termux.com/wiki/Installing_from_F-Droid)
 2. Open Termux and type `pkg install git` to install git
-3. Configure git username and email: `git config --global user.name "John Doe"` and `git config --global user.email johndoe@example.com` (this is the name and email which will go in the commits, it can be anything, not related with your Github account)
-4. In termux terminal create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
+3. Configure git username and email: `git config --global user.name "John Doe"` and `git config --global user.email johndoe@example.com` (this is the name and email which will go in the commits, it can be anything, not related to your Github account)
+4. In the termux terminal, create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
 5. Open logseq and add a graph on that folder. Check that all looks ok.
 
 #### Install shortcuts to synchronize the repository
