@@ -39,13 +39,13 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 ## Prerequisite
 
 1. [GitHub](https://github.com/) account.
-2. [Git](https://git-scm.com/downloads), on your computers.
+2. [Git](https://git-scm.com/downloads), for computer users.
 3. [Working Copy](https://workingcopyapp.com/), for iOS/iPadOS users.
 4. [Termux](https://termux.com/), for Andriod users.
 
 <details>
     <summary>What is Git?</summary>
-    Git is a specific open-source version control system created by Linus Torvalds in 2005.
+    Git is a free and open source distributed version control system created by Linus Torvalds in 2005.
 </details>
 
 <details>
@@ -64,6 +64,12 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 </p>
 </details>
 
+## Limitations
+
+1. Recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended.
+2. GitHub blocks pushes that exceed 100 MB, and you will receive a warning form Git when you attempt to add or update a file larger than 50 MB.
+3. Use [Git Large File Storage (Git LFS)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage), if you really need to track those big files with Git.
+
 ---
 
 ## Workflow
@@ -76,7 +82,7 @@ This is like typing in the account/passward, so make sure you follow **ALL** the
 
 This is like creating a folder in GitHub, follow [create-a-repo](https://docs.github.com/en/get-started/quickstart/create-a-repo) to create a **private** repo.
 
-※ Noted: If you create a **public** repo, that means everyone on GitHub can what you put in there. You don't waht that, do you?
+※ Noted: If you create a **public** repo, that means everyone on GitHub can see what you put in there. You don't want that, do you?
 
 ### Add .gitignore in your repo (Optional)
 
@@ -194,3 +200,5 @@ Steps are provides by @Abulafia[^4], sorry that I don't know the exact steps of 
 - [git hooks settings](https://discord.com/channels/725182569297215569/960982172683100160)
 - [What is github?](https://kinsta.com/knowledgebase/what-is-github/)
 - [How does Git work?](https://medium.com/@sahoosunilkumar/how-does-git-works-5cc8444ea383)
+- [Repository size limits for GitHub.com](https://stackoverflow.com/questions/38768454/repository-size-limits-for-github-com)
+- [About large files on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
