@@ -80,11 +80,11 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 
 #### What is Rejected push?
 
-Rejected push happens when you make changes to the older version of your repo. You are not up-to-date.
+Rejected push happens when you make changes to the older version of your repo. Your local repo are not up-to-date.
 
 #### What is Git Conflict?
 
-Git Conflict happens when you have two commits modifying same line of the files.
+Git conflict happens when you have two commits modifying same line of the files.
 
 #### Why do I need to know how to solve rejected push & Git conflict?
 
@@ -134,9 +134,9 @@ After deletion:
 - I’m faithful to Logseq.
 ```
 
-Open Logseq and that let Logseq do the rest (Logseq will `commit` and `push`.) for you, and the `Git conflict` should be resolved. Now you should only see the chosen part remain in your GitHub repo. And you are again a happy Logseq user now! 😍
+Open Logseq and that let Logseq do the rest (Logseq will `commit` and `push` due to git hooks setting.) for you, and the `Git conflict` should be resolved. Now you should only see the chosen part remain in your GitHub repo. And you are again a happy Logseq user now! 😍
 
-※ Noted: For <img src="./src/android.svg" style="width:25px;"/> Android users, you have to manually `commit` and `push` the changes since [your workflow](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101#android-termux-workflow) does not contain `git hooks` I provide.
+※ Noted: For <img src="./src/android.svg" style="width:25px;"/> Android users, you have to manually `commit` and `push` the changes since [your workflow](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101#android-termux-workflow) does not contain `git hooks` I provided.
 
 ※ Noted: Sometimes, it's the `logseq/metadata.edn` or `logseq/pages-metadata.edn` having Git conflits. This is trickier because you cannot tell easily which part is the one you need to keep. In this case I would suggest simply remove `logseq/metadata.edn` or `logseq/pages-metadata.edn` and do a `git pull` again, that will restore it from the one coming from GitHub. After pulling `logseq/metadata.edn` or `logseq/pages-metadata.edn` from GitHub, `Re-index` and `Refresh` Logseq are advised.
 
@@ -180,9 +180,9 @@ After Git is set and a private repo is created:
 4. If it's your first time git clone something from GitHub, it will probably ask if you agree to authorized the connection, just type `Yes` and hit enter.
 5. After it's done, you should see a new folder with your repo name.
 6. Open the folder, there should have a hidden folder named `.git`.
-7. Copy&paste the `post-commit` and `pre-commit` in `.git/hooks`.(Note: this folder could be hidden)
+7. Copy&paste the `post-commit` and `pre-commit` in `.git/hooks`. (Note: this folder could be hidden)
 8. Open Logseq and add the folder with `.git` as your new graph.
-9. Open Logseq > Settings > Version control > Enable Git auto commit.
+9. Open Logseq > Settings > Version control > toggle on "Enable Git auto commit".
 10. Type something and wait few minutes to see if what you typed has also appear in GitHub.
 11. If nothiong goes wrong, you are a happy Logseq user!
 
@@ -206,7 +206,7 @@ After Git is set and a private repo is created:
    to make those files executable by MacOS.
 
 9. Open Logseq and add the folder with `.git` as your new graph.
-10. Open Logseq > Settings > Version control > Enable Git auto commit.
+10. Open Logseq > Settings > Version control > toggle on "Enable Git auto commit".
 11. Type something and wait few minutes to see if what you typed has also appear in GitHub.
 12. If nothing goes wrong, you are a happy Logseq user!
 
@@ -230,7 +230,7 @@ After Git is set and a private repo is created:
        - Noted: In `Commit Repository`, you can toggle off `Fail when nothing to Commit` if you find the failure notification annoying. Although I prefer to keep it toggle on to prevent empty commit and empty push.
        - `Push Repository` - Repo: your Logseq repo
      - Turn off ask before running (or leave it on up to you)
-7. Type something and wait few minutes to see if what you typed has also appear in GitHub.
+7. Type something, exit Logseq, and wait few minutes to see if what you typed has also appear in GitHub.
 8. If nothiong goes wrong, you are a happy Logseq user!
 
 ※ Noted: If you are a student, you can sign up [github student pack](https://education.github.com/pack) and apply for free Working Copy Pro.
@@ -239,16 +239,24 @@ After Git is set and a private repo is created:
 
 #### Initial steps to install git and link it with logseq
 
-1. Install `Termux` in Android, using the `F-droid` app. Follow instructions [here](https://wiki.termux.com/wiki/Installing_from_F-Droid)
-2. Open Termux and type `pkg install git` to install git
-3. Configure git username and email: `git config --global user.name "John Doe"` and `git config --global user.email johndoe@example.com` (this is the name and email which will go in commits, it can be anything, not related to your Github account)
-4. In the termux terminal, create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
-5. Open logseq and add a graph on that folder. Check that all looks ok.
+1. Install `Termux` in Android, using the `F-droid` app. Follow instructions [here](https://wiki.termux.com/wiki/Installing_from_F-Droid).
+2. Open Termux and type `pkg install git` to install Git.
+3. Configure Git username and email:
+
+   ```bash
+   git config --global user.name "John Doe"
+   git config --global user.email johndoe@example.com`
+   ```
+
+   ※ Noted: This is the name and email which will go into commits, it can be anything, not necessary related to your GitHub account.
+
+4. In the Termux terminal, create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
+5. Open Logseq and add a graph on that folder. Check that all looks ok.
 
 #### Install shortcuts to synchronize the repository
 
-1. Install `Termux:Widgets` from F-droid
-2. In termux, enter folder `~/.shortucts` and edit a file named for example `pull-graph` containing:
+1. Install `Termux:Widgets` from `F-droid`.
+2. In Termux, type `cd ~/.shortucts` and edit a file named, for example, `pull-graph` containing:
 
    ```bash
    #!/usr/bin/bash
@@ -257,9 +265,9 @@ After Git is set and a private repo is created:
    git pull
    ```
 
-   ※ Noted: If you use password-free private keys for git you don't need the `ssh-agent` line. You can include it to avoid typing the private key passphrase each time.
+   ※ Noted: If you use password-free private keys for Git you don't need the `ssh-agent` line. You can include it to avoid typing the private key passphrase each time.
 
-3. In the same `~/.shortcuts` folder create a second one named for example `pull-graph` contaning:
+3. In the same `~/.shortcuts` folder create a second one named, for example, `pull-graph` contaning:
 
    ```bash
    #!/usr/bin/bash
@@ -270,14 +278,14 @@ After Git is set and a private repo is created:
    git push
    ```
 
-4. Add to the Android screen a widget for `Termux Widget` app, which will show the scripts available in `~/.shortcuts` (in our example, it will show pull-graph and push-graph). Taping on them, they will be executed by Termux.
+4. Add a widget for `Termux Widget` app to the Android screen, which will show the scripts available in `~/.shortcuts` (in our example, it will show `pull-graph` and `push-graph`). Taping on them, they will be executed by Termux.
 
 #### Android-Termux-Workflow
 
-- Tap "pull-graph" to download from github the most recent version of your graph
-- Open Logseq and admire the latest version of your notes
-- Edit/add notes, work on them
-- Exit logseq and tap "push-graph" to upload your changes to github
+- Tap `pull-graph` to download the most recent version of your graph from GitHub.
+- Open Logseq and admire the latest version of your notes.
+- Edit/add notes, work on them.
+- Exit Logseq and tap `push-graph` to upload your changes to GitHub.
 
 ### <img src="./src/linux.svg" style="width:25px;"/> For Linux users
 
