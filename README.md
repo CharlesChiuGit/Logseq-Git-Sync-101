@@ -197,10 +197,18 @@ After Git is set and a private repo is created:
 5. After it's done, you should see a new folder with your repo name.
 6. Open the folder, there should have a hidden folder named `.git`.
 7. Copy&paste the `post-commit` and `pre-commit` in `.git/hooks`.
-8. Open Logseq and add the folder with `.git` as your new graph.
-9. Open Logseq > Settings > Version control > Enable Git auto commit.
-10. Type something and wait few minutes to see if what you typed has also appear in GitHub.
-11. If nothing goes wrong, you are a happy Logseq user!
+8. Right click in `.git/hooks` and click `New Terminal at folder`, type
+
+   ```bash
+   chmod +x ./pre-commit && chmod +x ./post-commit
+   ```
+
+   to make those files executable by MacOS.
+
+9. Open Logseq and add the folder with `.git` as your new graph.
+10. Open Logseq > Settings > Version control > Enable Git auto commit.
+11. Type something and wait few minutes to see if what you typed has also appear in GitHub.
+12. If nothing goes wrong, you are a happy Logseq user!
 
 ### <img src="./src/Apple.svg" style="width:25px;"/> For iOS/iPadOS users
 
@@ -219,6 +227,7 @@ After Git is set and a private repo is created:
      - Search actions >
        - `Stage for Commit` - Path: `*`, Repo: your Logseq repo
        - `Commit Repository` - Repo: your Logseq repo, Message: `Auto-commit from iOS/iPadOS`
+       - Noted: In `Commit Repository`, you can toggle off `Fail when nothing to Commit` if you find the failure notification annoying. Although I prefer to keep it toggle on to prevent empty commit and empty push.
        - `Push Repository` - Repo: your Logseq repo
      - Turn off ask before running (or leave it on up to you)
 7. Type something and wait few minutes to see if what you typed has also appear in GitHub.
