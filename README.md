@@ -2,7 +2,7 @@
 
 ## Description
 
-This repo aims to help Logseq users to sync their data with Git and GitHub.
+This repo aims to help Logseq users to sync their data via Git and GitHub.
 
 <p align="center">
         <img src="./src/ppap-meme.svg" style="width:50%"/>
@@ -80,11 +80,11 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 
 #### What is Rejected push?
 
-Rejected push happens when you make changes to the older version of your repo. Your local repo are not up-to-date.
+Rejected push happens when the remote (eg, GitHub) contains modifications that you have yet to download. This can happen if you forgot to do a pull in your local version before commitng new changes to it.
 
 #### What is Git Conflict?
 
-Git conflict happens when you have two commits modifying same line of the files.
+Git conflict happens when you have two commits, one local and the other remote, which modify the same file in the same lines.
 
 #### Why do I need to know how to solve rejected push & Git conflict?
 
