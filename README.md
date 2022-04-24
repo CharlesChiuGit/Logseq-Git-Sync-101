@@ -76,13 +76,21 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 1. Open multiple instances of Logseq at a time, e.g. open Logseq on your computer and on your phone at the same time. This will cause conflict in your repo.
 2. Put large files in `assets` folder, like images, videos, etc.
 
-## Conflicts handling
+## Rejected push & Conflicts handling
 
-#### What is Git Conflicts?
+#### What is Rejected push?
 
-Git Conflicts happen when you have two commits modifying same line of the files.
+Rejected push happens when you make changes to the older version of your repo. You are not up-to-date.
 
-Git Conflicts are something every Git users will meet eventually. It's important to know how to solve them.
+#### What is Git Conflict?
+
+Git Conflict happens when you have two commits modifying same line of the files.
+
+#### Why do I need to know how to solve rejected push & Git conflict?
+
+Rejected push and Git conflict are something every Git users will meet eventually. It's important to know how to solve them.
+
+#### Case study
 
 For example, You type "I'm faithful to Logseq." in your journal on your pc, but you also type "Na, I also use other note-taking tools." in your journal on your phone at the same time. GitHub will accept the first commit you push to it. But when you push the second commit, Git will say something like:
 
@@ -96,9 +104,9 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 which basicly means: "WTF Bruh, I can't believe you just lied to me. How can I trust you again?"
 
-So you type `git pull` in your **Git Bash**/**iTerms**/**Termux** to gain GitHub's trust again, like what Git suggested in `hint:`. And that's how to resolve most of Git Conflicts.
+So you type `git pull` in your **Git Bash**/**iTerms**/**Termux** to gain GitHub's trust again, like what Git suggested in `hint:`. And that's how to resolve most of the `rejected push`.
 
-But sometimes that's not enough. Git will say:
+However, sometimes that's not enough. After using `git pull` to update your local repo, Git will say:
 
 ```bash
 Auto-merging {the conflict file} #e.g. journals/2022_04_23.md
@@ -126,7 +134,11 @@ After deletion:
 - I’m faithful to Logseq.
 ```
 
-Open Logseq and that let Logseq do the rest for you. Now you should only see the chosen part remain in your GitHub repo. And you are again a happy Logseq user now! 😍
+Open Logseq and that let Logseq do the rest (Logseq will `commit` and `push`.) for you, and the `Git conflict` should be resolved. Now you should only see the chosen part remain in your GitHub repo. And you are again a happy Logseq user now! 😍
+
+※ Noted: For <img src="./src/android.svg" style="width:25px;"/> Android users, you have to manually `commit` and `push` the changes since [your workflow](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101#android-termux-workflow) does not contain `git hooks` I provide.
+
+※ Noted: Sometimes, it's the `logseq/metadata.edn` or `logseq/pages-metadata.edn` having Git conflits. This is trickier because you cannot tell easily which part is the one you need to keep. In this case I would suggest simply remove `logseq/metadata.edn` or `logseq/pages-metadata.edn` and do a `git pull` again, that will restore it from the one coming from GitHub. After pulling `logseq/metadata.edn` or `logseq/pages-metadata.edn` from GitHub, `Re-index` and `Refresh` Logseq are advised.
 
 ---
 
