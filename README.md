@@ -65,18 +65,18 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 </p>
 </details>
 
-## Limitations of GitHub
+## ⚠️ Limitations of GitHub
 
 1. Recommend repositories remain small, ideally less than 1 GB, and less than 5 GB is strongly recommended.
 2. GitHub blocks pushes that exceed 100 MB, and you will receive a warning form Git when you attempt to add or update a file larger than 50 MB.
 3. Use [Git Large File Storage (Git LFS)](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage), if you really need to track those big files with Git.
 
-## Things you should avoid
+## ⚠️ Things you should avoid
 
 1. Open multiple instances of Logseq at a time, e.g. open Logseq on your computer and on your phone at the same time. This will cause conflict in your repo.
 2. Put large files in `assets` folder, like images, videos, etc.
 
-## Rejected push & Conflicts handling
+## 💥 Rejected push & Conflicts handling
 
 #### What is Rejected push?
 
@@ -142,7 +142,7 @@ Open Logseq and that let Logseq do the rest (Logseq will `commit` and `push` due
 
 ---
 
-## Workflow
+## 🪜 Workflow
 
 ### Set up Git
 
