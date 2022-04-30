@@ -347,3 +347,4 @@ After Git is set and a private repo is created:
 - [How does Git work?](https://medium.com/@sahoosunilkumar/how-does-git-works-5cc8444ea383)
 - [Repository size limits for GitHub.com](https://stackoverflow.com/questions/38768454/repository-size-limits-for-github-com)
 - [About large files on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
+- [Differences between CRLF and LF](https://violin-tao.blogspot.com/2016/05/crlflf-bug.html), in Chinese.
