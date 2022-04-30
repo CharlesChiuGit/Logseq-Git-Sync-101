@@ -76,7 +76,7 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 1. Open multiple instances of Logseq at a time, e.g. open Logseq on your computer and on your phone at the same time. This will cause conflict in your repo.
 2. Put large files in `assets` folder, like images, videos, etc.
 
-## 💥 Rejected push & Conflicts handling
+## 💥 Rejected push & Conflicts handling & Trailing whitespace
 
 #### What is Rejected push?
 
@@ -85,6 +85,13 @@ Rejected push happens when the remote (eg, GitHub) contains modifications that y
 #### What is Git Conflict?
 
 Git conflict happens when you have two commits, one local and the other remote, which modify the same file in the same lines.
+
+#### What is Trailing whitespace?
+
+Trailing whitespace happens due to two reasons:
+
+1. CRLF : Windows uses CRLF(carriage return line feed: `\r\n`) and Unix uses LF(line feed `\n`).
+2. Trailing whitespace: File contains lines ending with space.
 
 #### Why do I need to know how to solve rejected push & Git conflict?
 
@@ -140,6 +147,39 @@ Open Logseq and that let Logseq do the rest (Logseq will `commit` and `push` due
 
 ※ Noted: Sometimes, it's the `logseq/metadata.edn` or `logseq/pages-metadata.edn` having Git conflits. This is trickier because you cannot tell easily which part is the one you need to keep. In this case I would suggest simply remove `logseq/metadata.edn` or `logseq/pages-metadata.edn` and do a `git pull` again, that will restore it from the one coming from GitHub. After pulling `logseq/metadata.edn` or `logseq/pages-metadata.edn` from GitHub, `Re-index` and `Refresh` Logseq are advised.
 
+#### Trailing whitespace handling
+
+In your **Git Bash**/**iTerms**/**Termux**, turn off crlf check in your Git config.
+
+```bash
+git config --global core.autocrlf false
+git config --global core.safecrlf false
+```
+
+and try to push again.
+
+If that's not enough, add below code in your `.git/hooks/pre-commit` to remove trailing whitespace.
+
+```bash
+if git rev-parse --verify HEAD >/dev/null 2>&1
+then
+    against=HEAD
+else
+    # Initial commit: diff against an empty tree object
+    against=4b825dc642cb6eb9a060e54bf8d69288fbee4904 # <the first commit id of your repo>
+fi
+
+# Find files with trailing whitespace
+for FILE in `exec git diff-index --check $against -- | sed '/^[+-]/d' | (sed -r 's/:[0-9]+:.*//' > /dev/null 2>&1 || sed -E 's/:[0-9]+:.*//') | uniq` ; do
+    # Fix them!
+    (sed -i 's/[[:space:]]*$//' "$FILE" > /dev/null 2>&1 || sed -i '' -E 's/[[:space:]]*$//' "$FILE")
+    git add "$FILE"
+    echo "NOTE: removed trailing whitespace from $FILE"
+done
+```
+
+and try to push again.
+
 ---
 
 ## 🪜 Workflow
@@ -166,9 +206,9 @@ logseq/bak/
 logseq/.recycle
 ```
 
-### Download this repo
+### Download this repo, for computer users
 
-Click the green `Code` button and `Download ZIP`, then unzip it for later use.
+Click the green `Code` button of this repo and `Download ZIP`, then unzip it for later use.
 
 ### <img src="./src/Windows.svg" style="width:25px;"/> For Windows users
 
