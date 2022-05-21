@@ -223,6 +223,7 @@ After Git is set and a private repo is created:
 7. Copy&paste the `post-commit` and `pre-commit` in `.git/hooks`. (Note: this folder could be hidden)
 8. Open Logseq and add the folder with `.git` as your new graph.
 9. Open Logseq > Settings > Version control > toggle on "Enable Git auto commit".
+   1. If you don't want auto-commit to commit in the middle of writing, you can use the [git-plugin](https://github.com/haydenull/logseq-plugin-git) by [haydenull](https://github.com/haydenull) to commit manually by yourself.
 10. Type something and wait few minutes to see if what you typed has also appear in GitHub.
 11. If nothiong goes wrong, you are a happy Logseq user!
 
@@ -247,6 +248,7 @@ After Git is set and a private repo is created:
 
 9. Open Logseq and add the folder with `.git` as your new graph.
 10. Open Logseq > Settings > Version control > toggle on "Enable Git auto commit".
+    1. If you don't want auto-commit to commit in the middle of writing, you can use the [git-plugin](https://github.com/haydenull/logseq-plugin-git) by [haydenull](https://github.com/haydenull) to commit manually by yourself.
 11. Type something and wait few minutes to see if what you typed has also appear in GitHub.
 12. If nothing goes wrong, you are a happy Logseq user!
 
