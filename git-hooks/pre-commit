@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Pull before committing
 # Credential handling options:
@@ -13,7 +13,7 @@
 output=$(git pull --no-rebase)
 
 # Handle non error output as otherwise it gets shown with any exit code by logseq
-if [ "$output" == "Already up to date." ]; then
+if [[ "$output" == "Already up to date." ]]; then
    # no ouput
    exit 0
 else 
