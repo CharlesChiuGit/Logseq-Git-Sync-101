@@ -42,7 +42,7 @@ However, Git is quite scary for non-programmers, so this doc is here to help!
 1. [GitHub](https://github.com/) account.
 2. [Git](https://git-scm.com/downloads), for computer users.
 3. [Working Copy](https://workingcopyapp.com/), for iOS/iPadOS users.
-4. [Termux](https://termux.com/), for Andriod users.
+4. [Termux](https://termux.com/), for Android users.
 
 <details>
     <summary>What is Git?</summary>
@@ -109,7 +109,7 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-which basicly means: "WTF Bruh, I can't believe you just lied to me. How can I trust you again?"
+which basically means: "WTF Bruh, I can't believe you just lied to me. How can I trust you again?"
 
 So you type `git pull` in your **Git Bash**/**iTerms**/**Termux** to gain GitHub's trust again, like what Git suggested in `hint:`. And that's how to resolve most of the `rejected push`.
 
@@ -145,7 +145,7 @@ Open Logseq and that let Logseq do the rest (Logseq will `commit` and `push` due
 
 ※ Noted: For <img src="./src/android.svg" style="width:25px;"/> Android users, you have to manually `commit` and `push` the changes since [your workflow](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101#android-termux-workflow) does not contain `git hooks` I provided.
 
-※ Noted: Sometimes, it's the `logseq/metadata.edn` or `logseq/pages-metadata.edn` having Git conflits. This is trickier because you cannot tell easily which part is the one you need to keep. In this case I would suggest simply remove `logseq/metadata.edn` or `logseq/pages-metadata.edn` and do a `git pull` again, that will restore it from the one coming from GitHub. After pulling `logseq/metadata.edn` or `logseq/pages-metadata.edn` from GitHub, `Re-index` and `Refresh` Logseq are advised.
+※ Noted: Sometimes, it's the `logseq/metadata.edn` or `logseq/pages-metadata.edn` having Git conflicts. This is trickier because you cannot tell easily which part is the one you need to keep. In this case I would suggest simply remove `logseq/metadata.edn` or `logseq/pages-metadata.edn` and do a `git pull` again, that will restore it from the one coming from GitHub. After pulling `logseq/metadata.edn` or `logseq/pages-metadata.edn` from GitHub, `Re-index` and `Refresh` Logseq are advised.
 
 #### Trailing whitespace handling
 
@@ -186,9 +186,9 @@ and try to push again.
 
 ### Set up Git
 
-This is like typing in the account/passward, so make sure you follow **ALL** the steps in [set-up-git](https://docs.github.com/en/get-started/quickstart/set-up-git).
+This is like typing in the account/password, so make sure you follow **ALL** the steps in [set-up-git](https://docs.github.com/en/get-started/quickstart/set-up-git).
 
-※ Noted: `SSH-keys` is prefered to use in this workflow, **PLEASE** set it properly, **PLEASE**. [Connecting over SSH Section Link](https://docs.github.com/en/get-started/quickstart/set-up-git#connecting-over-ssh)
+※ Noted: `SSH-keys` is preferred to use in this workflow, **PLEASE** set it properly, **PLEASE**. [Connecting over SSH Section Link](https://docs.github.com/en/get-started/quickstart/set-up-git#connecting-over-ssh)
 
 ### Create a private repo
 
@@ -254,8 +254,10 @@ After Git is set and a private repo is created:
 
 ### <img src="./src/Apple.svg" style="width:25px;"/> For iOS/iPadOS users
 
+※ Noted: For people need more graphical instructions, check [this post by martyna](https://martyna.io/how-to-sync-logseq-via-git-across-devices-and-platforms/).
+
 1. Pay for the Pro version of the App `Working Copy`, it is cheap since you will never bother by iCloud crashing your Logseq anymore.
-2. Open Working Copy > Seetings(⚙️) > Hosting Providers > Click `Test` > Sign-in to your GitHub account.
+2. Open Working Copy > Settings(⚙️) > Hosting Providers > Click `Test` > Sign-in to your GitHub account.
 3. Open `Working Copy` > click `+` > Clone repository > Choose your repo.
 4. When download is done, long-press on the repo > Share > Link Repository to Folder > My iPhone/iPad (I would suggest don't choose iCloud) > Logseq-icon folder > create a new sub-folder under the Logseq-icon one (I would suggest don't name the folder with the same name as your repo.) > click `Done`
 5. Open `Logseq` and add new graph to that folder.
@@ -273,7 +275,7 @@ After Git is set and a private repo is created:
        - `Push Repository` - Repo: your Logseq repo
      - Turn off ask before running (or leave it on up to you)
 7. Type something, exit Logseq, and wait few minutes to see if what you typed has also appear in GitHub.
-8. If nothiong goes wrong, you are a happy Logseq user!
+8. If nothing goes wrong, you are a happy Logseq user!
 
 ※ Noted: If you are a student, you can sign up [github student pack](https://education.github.com/pack) and apply for free Working Copy Pro.
 
@@ -298,7 +300,7 @@ After Git is set and a private repo is created:
 #### Install shortcuts to synchronize the repository
 
 1. Install `Termux:Widgets` from `F-droid`.
-2. In Termux, type `cd ~/.shortucts` and edit a file named, for example, `pull-graph` containing:
+2. In Termux, type `cd ~/.shortcuts` and edit a file named, for example, `pull-graph` containing:
 
    ```bash
    #!/usr/bin/bash
@@ -309,7 +311,7 @@ After Git is set and a private repo is created:
 
    ※ Noted: If you use password-free private keys for Git you don't need the `ssh-agent` line. You can include it to avoid typing the private key passphrase each time.
 
-3. In the same `~/.shortcuts` folder create a second one named, for example, `pull-graph` contaning:
+3. In the same `~/.shortcuts` folder create a second one named, for example, `pull-graph` containing:
 
    ```bash
    #!/usr/bin/bash
@@ -333,7 +335,10 @@ After Git is set and a private repo is created:
 
 <details>
     <summary>Linux users click here</summary>
-    If you are a Linux user, why are you still watching this repo? Shooo. 😎
+If you are a Linux user, why are you still watching this repo? Shooo. 😎
+
+Or take the steps in MacOS's section as reference.
+
 </details>
 
 ---
