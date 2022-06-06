@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+#
+# If you are on linux, replace !/bin/sh with !/bin/bash
 #
 # Pull before committing
 # Credential handling options:
