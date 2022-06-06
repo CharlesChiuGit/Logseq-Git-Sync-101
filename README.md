@@ -10,7 +10,7 @@ This repo aims to help Logseq users to sync their data via Git and GitHub.
 
 ## Credits
 
-Credits to @danieltomasz[^1], @Sawhney[^2], @Caps[^3], @Abulafia[^4] @qwxlea[^5] for the workflow build up. And credits to @danzu[^6] for the incredicable diagram!
+Credits to @danieltomasz[^1], @Sawhney[^2], @Caps[^3], @Abulafia[^4] @qwxlea[^5] for the workflow build up. And credits to @danzu[^6] for the incredible diagram!
 
 FYI, those IDs are IDs in [Logseq Discord Server](https://discord.gg/bZ2jF9taUg).
 
