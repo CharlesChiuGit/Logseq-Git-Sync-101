@@ -311,7 +311,7 @@ After Git is set and a private repo is created:
 
    ※ Noted: If you use password-free private keys for Git you don't need the `ssh-agent` line. You can include it to avoid typing the private key passphrase each time.
 
-3. In the same `~/.shortcuts` folder create a second one named, for example, `pull-graph` containing:
+3. In the same `~/.shortcuts` folder create a second one named, for example, `push-graph` containing:
 
    ```bash
    #!/usr/bin/bash
