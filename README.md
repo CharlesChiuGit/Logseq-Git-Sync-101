@@ -229,7 +229,7 @@ After Git is set and a private repo is created:
 
 ### <img src="./src/Apple.svg" style="width:25px;"/> For MacOS users
 
-※ Noted: For those video learners, here is a great video made by [David Allen](https://www.youtube.com/c/DavidAllenSpondicious)
+※ Noted: For those video learners, here is a great video made by [David Allen](https://www.youtube.com/c/DavidAllenSpondicious).
 [![Logseq sync with Git and GitHub - The Good and Geeky Way](https://img.youtube.com/vi/c2HrdSOoVD8/0.jpg)](https://youtu.be/c2HrdSOoVD8)
 
 After Git is set and a private repo is created:
@@ -258,6 +258,9 @@ After Git is set and a private repo is created:
 ### <img src="./src/Apple.svg" style="width:25px;"/> For iOS/iPadOS users
 
 ※ Noted: For people need more graphical instructions, check [this post by martyna](https://martyna.io/how-to-sync-logseq-via-git-across-devices-and-platforms/).
+
+※ Noted: For those video learners, here is a great video made by [David Allen](https://www.youtube.com/c/DavidAllenSpondicious).
+[![Sync Logseq to iOS Devices - Part Two Good and Geeky](https://img.youtube.com/vi/FUSlKE19K5I/0.jpg)](https://youtu.be/FUSlKE19K5I)
 
 1. Pay for the Pro version of the App `Working Copy`, it is cheap since you will never bother by iCloud crashing your Logseq anymore.
 2. Open Working Copy > Settings(⚙️) > Hosting Providers > Click `Test` > Sign-in to your GitHub account.
