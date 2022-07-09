@@ -229,6 +229,9 @@ After Git is set and a private repo is created:
 
 ### <img src="./src/Apple.svg" style="width:25px;"/> For MacOS users
 
+※ Noted: For those video learners, here is a great video made by [David Allen](https://www.youtube.com/c/DavidAllenSpondicious)
+[![Logseq sync with Git and GitHub - The Good and Geeky Way](https://img.youtube.com/vi/c2HrdSOoVD8/0.jpg)](https://youtu.be/c2HrdSOoVD8)
+
 After Git is set and a private repo is created:
 
 1. Go to your local drive and right-click on it.
