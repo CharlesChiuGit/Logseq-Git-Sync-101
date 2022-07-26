@@ -276,10 +276,15 @@ After Git is set and a private repo is created:
      - `App` > choose `Logseq` > click `Next`
      - Search actions >
        - `Stage for Commit` - Path: `*`, Repo: your Logseq repo
+       - `If` condition
+         - Input: `Select Magic Variable` - choose `Filenames` below the first action
+         - Condition: `has any value`
+         - Put the following two actions `Commit Repository` and `Push Repository` under this `If` condition so that we only make a commit when changes detected therefore we can avoid empty commit
        - `Commit Repository` - Repo: your Logseq repo, Message: `Auto-commit from iOS/iPadOS`
        - Noted: In `Commit Repository`, you can toggle off `Fail when nothing to Commit` if you find the failure notification annoying. Although I prefer to keep it toggle on to prevent empty commit and empty push.
        - `Push Repository` - Repo: your Logseq repo
      - Turn off ask before running (or leave it on up to you)
+     - The final workflow should look like <img src="./src/ios-shortcuts-setup.png"/>
 7. Type something, exit Logseq, and wait few minutes to see if what you typed has also appear in GitHub.
 8. If nothing goes wrong, you are a happy Logseq user!
 
