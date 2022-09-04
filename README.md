@@ -305,8 +305,9 @@ After Git is set and a private repo is created:
 
    ※ Noted: This is the name and email which will go into commits, it can be anything, not necessary related to your GitHub account.
 
-4. In the Termux terminal, create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
-5. Open Logseq and add a graph on that folder. Check that all looks ok.
+4. In the Termux terminal, type `termux-setup-storage` to allow Termux access to your internal storage and/or SD card
+5. In the Termux terminal, create a folder for your graph, for example `cd documents; mkdir MyGraph` and clone your repo there with the command `git clone git@github.com:{your-username}/{your-reponame}.git ~/documents/MyGraph`
+6. Open Logseq and add a graph on that folder. Check that all looks ok.
 
 #### Install shortcuts to synchronize the repository
 
