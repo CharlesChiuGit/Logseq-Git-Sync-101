@@ -11,8 +11,7 @@
     <a href="https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/issues">
     <img
         alt="GitHub issues"
-        src="https://img.shields.io/github/issues-raw/CharlesChiuGit/Logseq-Git-Sync-101?color=%23DCA561&label=%EF%85%85%20ISSUES&style=for-the-badge">
-    </a>
+        src="https://img.shields.io/github/issues-raw/CharlesChiuGit/Logseq-Git-Sync-101?color=DCA561&logo=gitbook&logoColor=d9e0ee&style=for-the-badge">
     <a href="https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/contributors">
     <img
         alt="GitHub contributors"
@@ -20,7 +19,7 @@
     </a>
     <img
         alt="GitHub code size in bytes"
-        src="https://img.shields.io/github/languages/code-size/CharlesChiuGit/Logseq-Git-Sync-101?color=7E9CD8&label=%EF%84%A1%20Code&logo=code&style=for-the-badge">
+        src="https://img.shields.io/github/languages/code-size/CharlesChiuGit/Logseq-Git-Sync-101?color=%237E9CD8&logo=gitlfs&logoColor=d9e0ee&style=for-the-badge">
 </p>
 
 ## Description
