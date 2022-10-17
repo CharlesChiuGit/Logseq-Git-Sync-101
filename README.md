@@ -22,6 +22,18 @@
         src="https://img.shields.io/github/languages/code-size/CharlesChiuGit/Logseq-Git-Sync-101?color=%237E9CD8&logo=gitlfs&logoColor=d9e0ee&style=for-the-badge">
 </p>
 
+<p align="center">
+    <img
+        alt="shell script"
+        src="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white">
+    <a href="https://logseq.com/#/">
+    <img
+        alt="Logseq"
+        src="https://img.shields.io/static/v1?label=&message=LOGSEQ&color=002B35&style=for-the-badge">
+    </a>
+
+</a>
+
 ## Description
 
 This repo aims to help Logseq users to sync their data via Git and GitHub.
