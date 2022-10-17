@@ -104,10 +104,10 @@ Please check [Rejected push & Conflicts handling & Trailing whitespace](https://
 
 - [Working Copy on iOS](https://discord.com/channels/725182569297215569/766475028978991104/946787658405908560), by @danieltomasz[^1].
 - [Steps to auto sync iOS + Windows](https://discord.com/channels/725182569297215569/924907384730689566/966343847934324776), by @Caps[^3].
-- [Gitea - self hosted git server](https://discord.com/channels/725182569297215569/924907384730689566/963840487712780320), by @Sawhney[^2].
+- [Gitea - self-hosted git server](https://discord.com/channels/725182569297215569/924907384730689566/963840487712780320), by @Sawhney[^2].
 - [Self Managed Sync + Android setup](https://discord.com/channels/725182569297215569/966983361249816586), by @danzu[^5] and @Abulafia[^4].
-- [git hooks settings](https://discord.com/channels/725182569297215569/960982172683100160)
-- [What is github?](https://kinsta.com/knowledgebase/what-is-github/)
+- [Git hooks settings](https://discord.com/channels/725182569297215569/960982172683100160)
+- [What is GitHub?](https://kinsta.com/knowledgebase/what-is-github/)
 - [How does Git work?](https://medium.com/@sahoosunilkumar/how-does-git-works-5cc8444ea383)
 - [Repository size limits for GitHub.com](https://stackoverflow.com/questions/38768454/repository-size-limits-for-github-com)
 - [About large files on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
