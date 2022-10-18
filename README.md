@@ -48,9 +48,13 @@ This repo aims to help Logseq users to sync their data via Git and GitHub.
       <img src="./src/self-managed-sync.png" style="width:80%"/>
 </p>
 
-<blockquote align="center">
-Self Managed Sync Diagram, by @danzu
-</blockquote>
+<!-- <blockquote align="center"> -->
+<!-- Self Managed Sync Diagram, by @danzu -->
+<!-- </blockquote> -->
+
+<div align="center">
+    <h6> Self Managed Sync Diagram, by @danzu</h6>
+</div>
 
 From the above diagram, it's pretty obvious that **Git** is the most robust way to sync your graph. iCloud is slow and problematic, and [Syncthing](https://syncthing.net/downloads/) is not available on iOS/iPadOS.
 
