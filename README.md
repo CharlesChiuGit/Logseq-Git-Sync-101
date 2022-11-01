@@ -98,9 +98,15 @@ Lol, just a joke. Take the steps in macOS section as reference if you need it.
 
 </details>
 
-## 💥 Omg, Something blows up!(FAQ)
+## 💥 Omg, Something blows up!
 
-Please check [Rejected push & Conflicts handling & Trailing whitespace](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F0%9F%92%A5-Rejected-push-&-Conflicts-handling-&-Trailing-whitespace).
+Please check [FAQ](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F0%9F%92%A5-FAQ).
+
+---
+
+## Change log
+
+2022-11-01: Update `Prerequisite`, `For macOS users`, `For Android users`, `FAQ` wiki.
 
 ---
 
