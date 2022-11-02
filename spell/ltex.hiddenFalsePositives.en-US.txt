@@ -1,2 +1,1 @@
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q💥 Omg, Something blows up!(FAQ)\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q💥 Omg, Something blows up!\\E$"}
