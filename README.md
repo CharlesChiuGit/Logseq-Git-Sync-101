@@ -45,7 +45,7 @@ This repo aims to help Logseq users to sync their data via Git and GitHub.
 ## Why use Git + GitHub to sync Logseq graph?
 
 <p align="center">
-      <img src="./src/self-managed-sync.png" style="width:80%"/>
+      <img src="./src/self-managed-sync-v2.png" style="width:80%"/>
 </p>
 
 <!-- <blockquote align="center"> -->
