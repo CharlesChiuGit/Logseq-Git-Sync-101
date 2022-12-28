@@ -3,8 +3,8 @@
 #
 # Pull before committing
 # Credential handling options:
-#  - hardcode credentials in URL 
-#  - use ssh with key auth 
+#  - hardcode credentials in URL
+#  - use ssh with key auth
 #  - https://git-scm.com/docs/git-credential-store
 #  - git credential helper on windows
 
@@ -15,11 +15,11 @@ output=$(git pull --no-rebase)
 
 # Handle non error output as otherwise it gets shown with any exit code by logseq
 if [ "$output" = "Already up to date." ]; then
-   # no output
-   :
-else 
-   # probably error print it to screen   
-   echo "${output}"
+    # no output
+    :
+else
+    # probably error print it to screen
+    echo "${output}"
 fi
 
 git add -A
