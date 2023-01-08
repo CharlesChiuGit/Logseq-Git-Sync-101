@@ -106,6 +106,7 @@ Please check [FAQ](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F
 
 ## Change log
 
+2023-01-09: Add `a-Shell` support for iOS/iPadOS users as a free althernative.
 2022-11-01: Update `Prerequisite`, `For macOS users`, `For Android users`, `FAQ` wiki.
 
 ---
@@ -122,12 +123,14 @@ Please check [FAQ](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F
 - [Repository size limits for GitHub.com](https://stackoverflow.com/questions/38768454/repository-size-limits-for-github-com)
 - [About large files on GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)
 - [Differences between CRLF and LF](https://violin-tao.blogspot.com/2016/05/crlflf-bug.html), in Chinese.
+- [Alternative way of git syncing on iOS using a-shell for free](https://discuss.logseq.com/t/alternative-way-of-git-syncing-on-ios-using-a-shell-for-free/8570), by Petrus Hyvönen[^7].
+- [[Tutorial] How to enable automatic logseq graph sync on iOS with git & shortcut](https://www.reddit.com/r/logseq/comments/105kqts/tutorial_how_to_enable_automatic_logseq_graph/), by @sickmz[^8].
 
 ## 🎉 Acknowledgment
 
 Credits to @danieltomasz[^1], @Sawhney[^2], @Caps[^3], @Abulafia[^4] @qwxlea[^5] for the workflow build up. And credits to @danzu[^6] for the incredible diagram!
 
-FYI, those IDs are IDs in [Logseq Discord Server](https://discord.gg/bZ2jF9taUg).
+FYI, those IDs are IDs in [Logseq Discord Server](https://discord.gg/bZ2jF9taUg) if not specified.
 
 [^1]: danieltomasz#5748
 [^2]: Sawhney#7320
@@ -135,3 +138,5 @@ FYI, those IDs are IDs in [Logseq Discord Server](https://discord.gg/bZ2jF9taUg)
 [^4]: Abulafia#3734
 [^5]: qwxlea#3490
 [^6]: danzu#6567
+[^7]: https://discuss.logseq.com/u/Petrush
+[^8]: https://github.com/sickmz
