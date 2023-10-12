@@ -106,8 +106,9 @@ Please check [FAQ](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F
 
 ## Change log
 
-2023-01-09: Add `a-Shell` support for iOS/iPadOS users as a free althernative.
-2022-11-01: Update `Prerequisite`, `For macOS users`, `For Android users`, `FAQ` wiki.
+- 2023-10-12: Add [Why and how to fix error: "fatal: not in a git directory"?](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F0%9F%92%A5-FAQ#why-and-how-to-fix-error-fatal-not-in-a-git-directory) to `FAQ`.
+- 2023-01-09: Add `a-Shell` support for iOS/iPadOS users as a free althernative.
+- 2022-11-01: Update `Prerequisite`, `For macOS users`, `For Android users`, `FAQ` wiki.
 
 ---
 
