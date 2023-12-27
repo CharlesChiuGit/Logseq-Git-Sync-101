@@ -106,8 +106,9 @@ Please check [FAQ](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F
 
 ## Change log
 
-- 2023-11-21: Update [For-iOS-iPadOS-users-(Working-Copy)](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/For-iOS-iPadOS-users-(Working-Copy)) for updated version of Working Copy.
-- 2023-10-21: Add deprecation warning at [For-iOS-iPadOS-users-(a-Shell,-Deprecated)](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/For-iOS-iPadOS-users-\(a-Shell,-Deprecated\))
+- 2023-12-27: Fix [For Android users](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/For-Android-users) `Termux` path to `~/storage/shared` to avoid issue#34.
+- 2023-11-21: Update [For iOS/iPadOS users (Working-Copy)](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/For-iOS-iPadOS-users-(Working-Copy)) for updated version of Working Copy.
+- 2023-10-21: Add deprecation warning at [For iOS/iPadOS users (a-Shell-Deprecated)](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/For-iOS-iPadOS-users-\(a-Shell,-Deprecated\))
 - 2023-10-12: Add [Why and how to fix error: "fatal: not in a git directory"?](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F0%9F%92%A5-FAQ#why-and-how-to-fix-error-fatal-not-in-a-git-directory) to `FAQ`.
 - 2023-01-09: Add `a-Shell` support for iOS/iPadOS users as a free althernative.
 - 2022-11-01: Update `Prerequisite`, `For macOS users`, `For Android users`, `FAQ` wiki.
