@@ -11,6 +11,22 @@
 # Redirect output to stderr, uncomment for more output for debugging
 # exec 1>&2
 
+# Fetch latest changes from remote without merging
+git fetch --no-tags
+
+# Attempt merge with automatic conflict resolution
+git merge --no-commit FETCH_HEAD 2> /dev/null
+
+# Check if merge was successful
+if [ $? -eq 0 ]; then
+    # Merge successful, commit changes
+    git commit -m "Automatic merge from pre-commit hook"
+else
+    # Merge conflicts detected, abort commit process
+    echo "Merge conflicts detected. Please resolve conflicts manually and commit."
+    exit 1
+fi
+
 output=$(git pull --no-rebase)
 
 # Handle non error output as otherwise it gets shown with any exit code by logseq
