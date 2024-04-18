@@ -106,6 +106,7 @@ Please check [FAQ](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F
 
 ## Change log
 
+- 2024-04-18: Add ssh config in [Workflow](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F0%9F%AA%9C-Workflow) to avoid [Permission denied:(publickey)](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/%F0%9F%92%A5-FAQ#how-to-fix-error-permission-deniedpublickey) issue.
 - 2023-12-27: Fix [For Android users](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/For-Android-users) `Termux` path to `~/storage/shared` to avoid issue#34.
 - 2023-11-21: Update [For iOS/iPadOS users (Working-Copy)](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/For-iOS-iPadOS-users-(Working-Copy)) for updated version of Working Copy.
 - 2023-10-21: Add deprecation warning at [For iOS/iPadOS users (a-Shell-Deprecated)](https://github.com/CharlesChiuGit/Logseq-Git-Sync-101/wiki/For-iOS-iPadOS-users-\(a-Shell,-Deprecated\))
